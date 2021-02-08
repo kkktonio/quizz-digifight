@@ -1,0 +1,9 @@
+{
+  "name": "starting_file",
+  "version": "1.0.0",
+  "description": "Wesh alors :)",
+  "main": "js.js",
+  "scripts": {
+    "sass" : "sass --watch ./main.scss:./style.css"
+  }
+}

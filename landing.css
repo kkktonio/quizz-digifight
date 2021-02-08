@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@900&family=Sigmar+One&display=swap');
+
+* {
+  font-family: 'Sigmar One', cursive;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/*input champs de texte - accueil*/
+
+.form__input {
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  background-color: rgb(255, 255, 255);
+  color: #333;
+  margin: 10px auto;
+  padding: 1.5rem 2rem;
+  border: none;
+  border-radius: 0.2rem;
+  border-bottom: 0.3rem solid transparent;
+}
+
+/*landing page css*/
+
+body {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  min-height: 100vh;
+  background-image: url("./images/background_4.gif");
+  /*background: rgb(244,13,13);
+  background: linear-gradient(90deg, rgba(244,13,13,1) 0%, rgba(255,173,53,1) 100%);*/
+  color: #dfe4ea;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+#logo2{
+    height: 40vh;
+    width: 65vh;
+}
