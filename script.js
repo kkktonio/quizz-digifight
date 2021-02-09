@@ -1,3 +1,5 @@
+// Sert à indiquer les différents éléments présents dans new Question
+
 class Question {
   constructor(text, choices, answer) {
     this.text = text;
@@ -9,7 +11,7 @@ class Question {
   }
 }
 
-//Il faut qu'on mette toutes nos questions dans ce tableau//
+//Il faut qu'on mette toutes nos questions dans ce tableau
 
 let questions = [
   new Question("Le plombier moustachu le plus connu du monde s’appelle Mario. Quel est son nom origine ?", ["Jumpman", "Speedman", "Strongman", "Cartman"], "Jumpman"),
@@ -49,6 +51,8 @@ let questions = [
   new Question("En 2016 qui était le PDG de Yahoo ?", ["Donald Trump","Bill Gates", "Ben Silberman", "Marissa Mayers"], "Marissa Mayers")
 
 ];
+
+// début du paramétrage de notre quizz
 
 class Quiz {
   constructor(questions) {
@@ -107,7 +111,7 @@ const display = {
   },
 };
 
-// Game logic
+// Logique du quizz
 quizApp = () => {
   if (quiz.hasEnded()) {
     display.endQuiz();
@@ -117,16 +121,15 @@ quizApp = () => {
     display.progress();
   }
 }
-// Create Quiz
+
+// Créer le quizz
 let quiz = new Quiz(questions);
 quizApp();
 
-//Reset le timer au temps dans la constante (a lancer en amont de la fonction timer)
-function timeReset() {
-  time_remaining = time;
-}
 
-// fonction du chrono
+
+
+// fonction de la progressbar
 
 function createProgressbar(id, duration, callback) {
   var progressbar = document.getElementById(id);
@@ -153,23 +156,11 @@ addEventListener('load', function() {
 });
 
 
-//pop up des règles du jeu
 
-var btnPopup = document.getElementById('btnPopup');
-var overlay = document.getElementById('overlay');
-btnPopup.addEventListener('click',openMoadl);
-function openMoadl() {
-overlay.style.display='block';
-}
-
-var btnClose = document.getElementById('btnClose');
-btnClose.addEventListener('click',closeModal);
-function closeModal() {
-  overlay.style.display='none';
-}
+// Timer avec le code de Simon
 
 //Timer de réponse max
-/*const time = 10000;
+const time = 10000;
 let time_remaining = time;
 function timer() {
   if (time_remaining >= 0) {
@@ -196,3 +187,23 @@ function timeReset() {
 // timer() Mettre la fonction à l'endroit ou vous voulez lancer le timer
 // myStopFunction() Mettre a l'endroit ou il faut arrêter le timer
 // timeReset() //Mettre avant de lancer le timer*/
+
+
+
+
+
+
+//pop up des règles du jeu
+
+/*var btnPopup = document.getElementById('btnPopup');
+var overlay = document.getElementById('overlay');
+btnPopup.addEventListener('click',openMoadl);
+function openMoadl() {
+  overlay.style.display='block';
+}
+
+var btnClose = document.getElementById('btnClose');
+btnClose.addEventListener('click',closeModal);
+function closeModal() {
+  overlay.style.display='none';
+}*/
