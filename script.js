@@ -152,6 +152,22 @@ addEventListener('load', function() {
   });
 });
 
+
+//pop up des règles du jeu
+
+var btnPopup = document.getElementById('btnPopup');
+var overlay = document.getElementById('overlay');
+btnPopup.addEventListener('click',openMoadl);
+function openMoadl() {
+overlay.style.display='block';
+}
+
+var btnClose = document.getElementById('btnClose');
+btnClose.addEventListener('click',closeModal);
+function closeModal() {
+  overlay.style.display='none';
+}
+
 //Timer de réponse max
 /*const time = 10000;
 let time_remaining = time;
