@@ -26,10 +26,12 @@ function getOrCreatePlayerId() {
 
 getOrCreatePlayerId();
 
-function createPlayer() {
+async function createPlayer() {
   playerName = nameInput.value;
   
-  updatePlayer()
+  await updatePlayer()
+
+  window.location.href = "index.html"
 }
 
 function addScore() {
@@ -39,9 +41,21 @@ function addScore() {
 }
 
 // on met à jour le player dans la base firestore
-function updatePlayer() {
-  playersCollection.doc(playerId).set({
+async function updatePlayer() {
+  await playersCollection.doc(playerId).set({
     name: playerName,
     score: playerScore
   });
 }
+
+console.log(playerId)
+playersCollection.doc(playerId).onSnapshot(function (doc) {
+    let data = doc.data();
+    console.log(data)
+
+    playerName = data.name;
+    playerScore = data.score;
+
+    nom_joueur.innerHTML = playerName
+
+});

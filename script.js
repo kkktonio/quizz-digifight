@@ -1,5 +1,12 @@
 // Sert à indiquer les différents éléments présents dans new Question
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 class Question {
   constructor(text, choices, answer) {
     this.text = text;
@@ -52,6 +59,16 @@ let questions = [
 
 ];
 
+
+
+
+// on mélange
+shuffleArray(questions)
+
+// on prend les n premiers
+let n = 5
+questions = questions.slice(0, n)
+
 // début du paramétrage de notre quizz
 
 class Quiz {
@@ -66,8 +83,13 @@ class Quiz {
   guess(answer) {
     if (this.getCurrentQuestion().isCorrectAnswer(answer)) {
       this.score++;
+
+      playerScore = this.score
+      updatePlayer()
     }
     this.currentQuestionIndex++;
+
+    restartTimer() 
   }
   hasEnded() {
     return this.currentQuestionIndex >= this.questions.length;
@@ -130,12 +152,14 @@ quizApp();
 
 
 // fonction de la progressbar
+var progressbar
+var progressbarinner;
 
 function createProgressbar(id, duration, callback) {
-  var progressbar = document.getElementById(id);
+  progressbar = document.getElementById(id);
   progressbar.className = 'progressbar';
 
-  var progressbarinner = document.createElement('div');
+  progressbarinner = document.createElement('div');
   progressbarinner.className = 'inner';
 
   progressbarinner.style.animationDuration = duration;
@@ -150,43 +174,24 @@ function createProgressbar(id, duration, callback) {
 }
 
 addEventListener('load', function() {
-  createProgressbar('progressbar', '12s', function() {
-    alert('Game Over, tu as perdu !');
-  });
+    createTimer()
 });
 
-
-
-// Timer avec le code de Simon
-
-//Timer de réponse max
-const time = 10000;
-let time_remaining = time;
-function timer() {
-  if (time_remaining >= 0) {
-    myTimer = setInterval(function () {
-      // alert(time_remaining = time_remaining - 10);
-      time_remaining = time_remaining - 1000;
-      $("#timer").text(time_remaining / 1000);
-      if (time_remaining <= 0) {
-        //Si le temps est écoulé
-        bad();
-        console.log("time over");
-      }
-    }, 1000);
-  }
+function stopProgressbar() {
+    progressbarinner.style.animationPlayState = "paused"
+    progressbar.innerHTML = ""
 }
-//Arrêter le timer (a lancer une fois que le timer est terminé / pendant l'action de fin du timer)
-function myStopFunction() {
-  clearTimeout(myTimer);
+
+function createTimer() {
+    createProgressbar('progressbar', '12s', function() {
+        //alert('Game Over, tu as perdu !');
+      });
 }
-//Reset le timer au temps dans la constante (a lancer en amont de la fonction timer)
-function timeReset() {
-  time_remaining = time;
+
+function restartTimer() {
+    stopProgressbar();
+    createTimer()
 }
-// timer() Mettre la fonction à l'endroit ou vous voulez lancer le timer
-// myStopFunction() Mettre a l'endroit ou il faut arrêter le timer
-// timeReset() //Mettre avant de lancer le timer*/
 
 
 
