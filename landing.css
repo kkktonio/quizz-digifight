@@ -30,9 +30,7 @@ body {
   align-items: center;
   justify-items: center;
   min-height: 100vh;
-  background-image: url("./images/background_4.gif");
-  /*background: rgb(244,13,13);
-  background: linear-gradient(90deg, rgba(244,13,13,1) 0%, rgba(255,173,53,1) 100%);*/
+  background-image: url("./images/background_1.jpg");
   color: #dfe4ea;
   text-decoration: none;
 }

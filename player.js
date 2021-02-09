@@ -57,5 +57,6 @@ playersCollection.doc(playerId).onSnapshot(function (doc) {
     playerScore = data.score;
 
     nom_joueur.innerHTML = playerName
+    score_joueur.innerHTML = playerScore + "  points"
 
 });
