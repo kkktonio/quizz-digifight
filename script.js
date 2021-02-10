@@ -151,6 +151,12 @@ quizApp();
 
 
 
+//function RedirectionJavascript(){
+ // document.location.href="gameover.html";
+//}
+
+//window.location.href = 'gameover.html';
+
 
 // fonction de la progressbar
 var progressbar
