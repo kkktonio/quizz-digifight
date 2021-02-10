@@ -8,6 +8,23 @@
   text-align: center;
 }
 
+body {
+  display: flex;
+  align-content: center;
+  min-height: 100vh;
+  background-image: url("./images/background_1.jpg");
+  color: #dfe4ea;
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+#logo2{
+    height: 40vh;
+    width: 65vh;
+}
+
 /*input champs de texte - accueil*/
 
 .form__input {
@@ -23,22 +40,77 @@
   border-bottom: 0.3rem solid transparent;
 }
 
-/*landing page css*/
-
-body {
-  display: grid;
+.container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-items: center;
-  min-height: 100vh;
-  background-image: url("./images/background_1.jpg");
-  color: #dfe4ea;
-  text-decoration: none;
+  justify-content: center;
+  align-content: center;
 }
 
-a:hover{
-  text-decoration: none;
+/*pop up des règles du battle royal*/ 
+
+#rules {
+  background: linear-gradient(-45deg, #55beff, #3fffb6, #c94ae0);
+  background-size: 100% 100%;
+  animation: gradient 15s ease infinite;
+  border-radius: 10px;
+  width: 65%;
+  height: 70%;
+  position: absolute;
+  top: 15%;
+  left: 16%;
+  /* center le contenu dans la boite */
+  z-index: 100;
 }
-#logo2{
-    height: 40vh;
-    width: 65vh;
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#titlerules {
+  position: absolute;
+  top: 10%;
+  left: 33%;
+  color: rgb(32, 32, 32);
+}
+
+#resumerules {
+  position: absolute;
+  top: 40%;
+  right: 20%; 
+  width: 500px;
+  height: 200px;
+  font-family: 'Sigmar One', cursive; 
+  font-weight: normal;
+  font-size: 20px;
+  color: black;
+ 
+}
+
+#icon {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 3%;
+  top: 5%;
+}
+
+#buttonrules{
+  height: 50px;
+  width: 180px;
+  position : fixed; left : 40px; top : 20px;
+  background: linear-gradient(-45deg, #55beff, #3fffb6);
+  font-family: 'Sigmar One', cursive; 
+  color: rgb(32, 32, 32);
+  border-color: rgb(32, 32, 32);
+  border-width: 2px; 
 }

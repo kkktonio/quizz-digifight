@@ -10,9 +10,8 @@
 }
 
 body {
-  display: grid;
-  align-items: center;
-  justify-items: center;
+  display: flex;
+  align-content: center;
   min-height: 100vh;
   background: #2f3542;
   color: #dfe4ea;

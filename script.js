@@ -36,7 +36,7 @@ let questions = [
   new Question("Comment s'appelle la ville où habite Bob L'éponge ?", ["Bikini Bossom","Bikini Tomtom", "Bikini Bottom", "Bikini Tossom"], "Bikini Bottom"),
   new Question("Quel film a connu le plus gros succès du box-office des années 90 ?", ["Pulp Fiction","Requiem For a Dream", "Forrest Gump", "Titanic"], "Titanic"),
   new Question("L'ESD c'est:", ["Créer, coder, développer","Créer, développer, coder", "Coder, développer, créer", "Développer, créer, coder"], "Créer, coder, développer"),
-  new Question("En langage HTML, à quoi correspond une balise <a> ?", ["Une image","Un titre", "Une fonction", "Lien Hypertext"], "Lien Hypertext"),
+  new Question("En langage HTML, à quoi correspond une balise '<a>' ?", ["Une image","Un titre", "Une fonction", "Lien Hypertext"], "Lien Hypertext"),
   new Question("Quel format d'image permet d'avoir un fond transparent ?", [".jpeg",".png", ".gif", ".tif"], ".png"),
   new Question("Entre ces trois génies de l’informatique, qui est le plus riche ?", ["Steve Jobs","Mark Zuckerberg", "Bill Gates", "Elon Musk"], "Elon Musk"),
   new Question("Comment se nomme le premier Youtuber Français à avoir ses 10 Millions d’abonnés ?", ["Cyprien","Squeezie", "Norman", "Mister V"], "Cyprien"),
@@ -104,7 +104,8 @@ const display = {
   endQuiz: function() {
     endQuizHTML = `
       <h1>Bravo votre quiz est terminé !</h1>
-      <h3> Votre score est de : ${quiz.score} / ${quiz.questions.length}</h3>`;
+      <h3> Votre score est de : ${quiz.score} / ${quiz.questions.length}</h3>
+      </br> <button onclick="window.location.href = 'score.html';" type="button" class="btn btn-dark"> Voir le classement </button>`;
     this.elementShown("quiz", endQuizHTML);
   },
   question: function() {
@@ -194,21 +195,16 @@ function restartTimer() {
 }
 
 
-
-
-
-
 //pop up des règles du jeu
 
-/*var btnPopup = document.getElementById('btnPopup');
-var overlay = document.getElementById('overlay');
-btnPopup.addEventListener('click',openMoadl);
-function openMoadl() {
-  overlay.style.display='block';
+function displayRules() {
+  rules.style.display = "flex";
+  formgroup.style.filter = "blur(3px)";
+  buttonrules.style.filter = "blur(3px)";
 }
 
-var btnClose = document.getElementById('btnClose');
-btnClose.addEventListener('click',closeModal);
-function closeModal() {
-  overlay.style.display='none';
-}*/
+function undisplayRules() {
+  rules.style.display = "none";
+  formgroup.style.filter = "none";
+  buttonrules.style.filter = "none";
+}

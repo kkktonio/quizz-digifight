@@ -7,8 +7,8 @@ function getBestScores() {
     bestScores.onSnapshot(function (snapshot) {
       snapshot.forEach(function (doc) {
         let data = doc.data();
-        playerPseudoDisplay.innerHTML += "<div>" + data.name + "</div>";
-        playerScoreDisplay.innerHTML += "<div>" + data.score + "</div>";
+        playerPseudoDisplay.innerHTML += "<div>" + data.name + " " + data.score + "</div>";
+        //playerScoreDisplay.innerHTML += "</div>" + data.score + "</div>";
         console.log(data);
       });
     });

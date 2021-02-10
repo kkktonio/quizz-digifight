@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@900&family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanalei&family=Passion+One:wght@900&display=swap');
+
+* {
+  font-family: 'Sigmar One', cursive;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* page de questionnaire */
+
+body {
+  display: flex;
+  align-content: center;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #833ab4, #fd1d1d, #fdb11d);
+  background-size: 350% 350%;
+  animation: gradient 15s ease infinite;
+  color: #dfe4ea;
+  font-family: 'Sigmar One';
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/*affichage des éléments principaux*/
+
+body h3 {
+  color: #ffa502;
+  font-size: 1.5rem;
+  margin-right: 40px;
+}
+
+#logo2 {
+  height: 14vh;
+  width: 25vh;
+}
+
+#logo_fixe {
+  position : fixed; left : 30px; top : 15px; 
+}
+
+/* Affichage du tableau des scores */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.titreScore {
+  display: flex;
+  flex-direction: row;
+}
+
+.contentScore {
+  display: flex;
+
+  padding: 40px;
+}

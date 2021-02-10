@@ -15,34 +15,29 @@
 
   <!-- le contenu de votre site -->
    
-  <!-- <button id="btnPopup" class="btnPopup">Afficher les règles</button>
-    <div id="overlay" class="overlay">
-    <div id="popup" class="popup">
-    <h2>
-    Exemple simple de popup 
-    <span id="btnClose" class="btnClose">&times;</span>
-    </h2>
-    <div>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a nulla 
-    a massa interdum imperdiet sed nec nibh. Proin porttitor euismod nulla ut 
-    interdum. Cras elementum placerat aliquam.
+  <div id="rules">
+    <h1 id="titlerules">Règles du Battle Royal</h1>
+    <p id="resumerules"> Pour survivre à cette bataille, tu devras répondre correctement à toutes les questions qui te seront posées dans le temps qui t’est imparti.
+        Mais attention, un seul faux pas ou tes 10s écoulées et la bataille est perdue pour toi !
+    </p>
+    <img id="icon" onclick="undisplayRules()" src="./images/iconcroix.png" alt="icon">
+  </div>
+
+  <button class="btn" id="buttonrules" onclick="displayRules()">Règles du Jeu</button>
+
+
+  <div class="container"> 
+    <img id="logo2" src="images/logo_digifight_couleur2.png">
+    <div id="playerDisplay"> </div>
+
+    <div id="currentRoomSection">
+      <input type="text" class="form__input" id="nameInput" placeholder="Entrez un pseudo" />
+
+      <button onclick="createPlayer()" type="button" class="btn btn-dark btn-lg btn-block"> Jouer </button>
+
+      <div id="display"></div>
+
     </div>
-    </div>
-    </div> -->
-
-  <div class="form__group"> 
-      <img id="logo2" src="images/logo_digifight_couleur2.png">
-      <div id="playerDisplay"> </div>
-
-      <div id="currentRoomSection">
-        <input type="text" class="form__input" id="nameInput" placeholder="Entrez un pseudo" />
-
-        <button onclick="createPlayer()" type="button" class="btn btn-dark btn-lg btn-block"> Jouer </button>
-    
-
-        <div id="display"></div>
-
-      </div>
   </div>
 
   <!-- les scripts JavaScript -->

@@ -8,35 +8,43 @@
   <title>Quiz - modèle</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="./style.css" rel="stylesheet">
+  <link href="./score.css" rel="stylesheet">
 </head>
 
 <body>
 
   <!-- le contenu de votre site -->
+  <div id="logo_fixe">
+    <a href="landing.html">
+      <img id="logo2" src="images/logo_digifight_couleur2.png">
+    </a>
+  </div>
 
-  <section class="section_score">
+  <div class="container">
+
     <div class="titreScore">
       <h3>Pseudo</h3>
       <h3>Score</h3>
     </div>
+
     <div class="contentScore">
       <div id="playerPseudoDisplay"></div>
       <div id="playerScoreDisplay"></div>
     </div>
-  </section>
+
+  </div>
 
   <!-- les scripts JavaScript -->
-    <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
+  <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
 
-    <!-- à la fin pour être sûr que le HTML a bien chargé -->
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
-    <script src="init-firebase.js"></script>
-    <script src="./player.js" type="text/javascript" ></script>
-    <script src="./score.js" type="text/javascript" ></script>
-    <script src="./script.js" type="text/javascript" ></script>
+  <!-- à la fin pour être sûr que le HTML a bien chargé -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-firestore.js"></script>
+  <script src="init-firebase.js"></script>
+  <script src="./player.js" type="text/javascript" ></script>
+  <script src="./score.js" type="text/javascript" ></script>
+  <script src="./script.js" type="text/javascript" ></script>
 </body>
 
 
