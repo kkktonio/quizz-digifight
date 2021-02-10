@@ -105,14 +105,6 @@ a:hover{
     width: 60vh;
 }
 
-#icon {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  right: 3%;
-  top: 5%;
-}
-
 #buttonlanding{
   height: 50px;
   width: 220px;
