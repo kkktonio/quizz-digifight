@@ -185,8 +185,8 @@ function stopProgressbar() {
 
 function createTimer() {
     createProgressbar('progressbar', '12s', function() {
-        //alert('Game Over, tu as perdu !');
-      });
+    alert('Game Over, tu as perdu !');
+  });
 }
 
 function restartTimer() {

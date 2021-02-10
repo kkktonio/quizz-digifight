@@ -8,40 +8,24 @@
   <title>Quiz - modèle</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link href="./landing.css" rel="stylesheet">
+  <link href="./gameover.css" rel="stylesheet">
 </head>
 
 <body>
 
   <!-- le contenu de votre site -->
-   
   <div id="rules">
     <div class="container">
-      <h1 id="titlerules">Règles du Battle Royal</h1>
-      <p id="resumerules"> Pour survivre à cette bataille et devenir l'élite de la jeunesse digitale, tu devras répondre correctement à toutes les questions qui te seront posées !
-      </br></br> Mais attention, un faux pas (temps de réflexion de 10s écoulé ou mauvaise réponse) et la bataille est perdue pour toi !
-      </br></br> ☠️  GAME OVER  ☠️
-      </p>
-    </div>
-    <img id="icon" onclick="undisplayRules()" src="./images/iconcroix_white.png" alt="icon">
+        <img id="gameover" src="./images/game_over_blanc2.png">
+        <h1 id="titlerules">Dommage c'est perdu !</h1>
+        <p id="resumerules"> Vous avez échoué ! Mais vous n'êtes pas le seul, regardez le tableau des classements pour connaitre votre rang.
+        </br></br> Vous souhaitez vous retenter votre chance ? Cliquez sur "rejouer".
+        </br>Mais attention votre score actuel sera remplacé par celui de la prochaine partie.
+        </p>
   </div>
 
-  <button class="btn" id="buttonrules" onclick="displayRules()">Règles du Jeu</button>
-
-
-  <div class="container"> 
-    <img id="logo2" src="images/logo_digifight_couleur2.png">
-    <div id="playerDisplay"> </div>
-
-    <div id="currentRoomSection">
-      <input type="text" class="form__input" id="nameInput" placeholder="Entrez un pseudo" />
-
-      <button onclick="createPlayer()" type="button" class="btn btn-dark btn-lg btn-block"> Jouer </button>
-
-      <div id="display"></div>
-
-    </div>
-  </div>
+  <button onclick="window.location.href = 'landing.html';" class="btn" id="buttonlanding" >Retour à l'accueil</button>
+  <button onclick="window.location.href = 'score.html';" class="btn" id="buttonscore" >Mon classement</button>
 
   <!-- les scripts JavaScript -->
     <script src="https://unpkg.com/uuid@latest/dist/umd/uuidv4.min.js"></script>
